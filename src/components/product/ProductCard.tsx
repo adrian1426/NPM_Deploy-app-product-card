@@ -5,6 +5,9 @@ import { useProduct } from '../../hooks/useProduct';
 import Card from '../common/card/Card';
 import { ProductProvider } from '../../context/productContext';
 import { Props } from './interfaces/ProductInterface';
+import CardImage from '../common/card/CardImage';
+import CardActions from '../common/card/CardActions';
+import CardTitle from '../common/card/CardTitle';
 
 
 const ProductCard = (props: Props) => {
@@ -25,10 +28,10 @@ const ProductCard = (props: Props) => {
           <ProductProvider
             value={{ imgProduct, title }}
           >
-            <Card.Image />
-            <Card.Title />
+            <CardImage />
+            <CardTitle />
 
-            <Card.Actions>
+            <CardActions>
               <button
                 className={styles.buttonMinus}
                 onClick={isControlled ? () => onChange(props.product, -1) : () => increaseCounter(-1)}
@@ -48,7 +51,7 @@ const ProductCard = (props: Props) => {
               >
                 +
               </button>
-            </Card.Actions>
+            </CardActions>
           </ProductProvider>
         )
       }
