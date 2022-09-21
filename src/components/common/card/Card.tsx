@@ -14,7 +14,7 @@ const Card = (props: Props) => {
       className={`${styles.productCard} ${className}`}
       {...rest}
     >
-      {children!({ name: 'AHH hernandez', mifun })}
+      {children!({ name: 'Texto que devuelto como parametro', mifun })}
     </div>
   );
 };
